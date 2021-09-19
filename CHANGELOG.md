@@ -1,3 +1,10 @@
+# 1.0.0 (2021-09-19)
+
+
+### Bug Fixes
+
+* **config:** Configuração do package ([b697993](https://github.com/CelioHauck/vazou-api/commit/b6979936a425328c24d38bcdb0e209da327b7a79))
+
 # [1.1.0](https://github.com/CelioHauck/node-example/compare/v1.0.0...v1.1.0) (2021-09-19)
 
 
