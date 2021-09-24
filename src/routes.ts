@@ -1,10 +1,21 @@
-import { requestHealthCheck } from "./controllers/health-check";
+import { requestHealthCheck } from './controllers/health-check';
+import { getMetrics, requestMetrics } from './controllers/metrics';
 
 export const AppRoutes: Route[] = [
   {
-    path: "/health",
-    method: "get",
+    path: '/health',
+    method: 'get',
     action: requestHealthCheck,
+  },
+  {
+    path: '/metrics',
+    method: 'get',
+    action: getMetrics,
+  },
+  {
+    path: '/metrics',
+    method: 'post',
+    action: requestMetrics,
   },
 ];
 
