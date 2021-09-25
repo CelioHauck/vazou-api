@@ -8,8 +8,4 @@ const instance = axios.create();
 
 instance.defaults.baseURL = baseURL;
 
-instance.interceptors.response.use((response) => {
-  return response.data;
-});
-
 export default instance;
