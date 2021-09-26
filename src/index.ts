@@ -1,8 +1,10 @@
-import * as Koa from "koa";
-import * as Router from "koa-router";
-import * as bodyParser from "koa-bodyparser";
-const cors = require("@koa/cors");
-import { AppRoutes } from "./routes";
+import * as Koa from 'koa';
+import * as Router from 'koa-router';
+import * as bodyParser from 'koa-bodyparser';
+const cors = require('@koa/cors');
+import { AppRoutes } from './routes';
+// process.env.TZ = 'America/Sao_Paulo';
+// console.log(new Date());
 
 const app = new Koa();
 const router = new Router();
@@ -17,4 +19,4 @@ AppRoutes.forEach((route) => {
 app.use(router.routes());
 
 app.listen(3055);
-console.log("listening on 3055");
+console.log('listening on 3055');

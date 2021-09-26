@@ -22,5 +22,5 @@ module.exports = {
     'issues',
     'lerna',
   ],
-  scopes: ['config','pwa'],
+  scopes: ['config', 'pwa', 'metrica'],
 };
