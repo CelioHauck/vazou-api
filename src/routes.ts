@@ -1,5 +1,6 @@
 import { requestHealthCheck } from './controllers/health-check';
 import { getMetrics, requestMetrics } from './controllers/metrics';
+import { requestTokens } from './controllers/token';
 
 export const AppRoutes: Route[] = [
   {
@@ -16,6 +17,11 @@ export const AppRoutes: Route[] = [
     path: '/metrics',
     method: 'post',
     action: requestMetrics,
+  },
+  {
+    path: '/token',
+    method: 'post',
+    action: requestTokens,
   },
 ];
 
