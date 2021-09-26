@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/CelioHauck/vazou-api/compare/v1.0.0...v1.1.0) (2021-09-26)
+
+
+### Features
+
+* **metrica:** Integração com o firebase ([#1](https://github.com/CelioHauck/vazou-api/issues/1)) ([7f22b5a](https://github.com/CelioHauck/vazou-api/commit/7f22b5aa7fd42e774ac70c5ebb3daf10ddbfea4a))
+
 # 1.0.0 (2021-09-19)
 
 
