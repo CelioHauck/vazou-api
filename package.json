@@ -55,7 +55,8 @@
     "koa-bodyparser": "^4.3.0",
     "koa-router": "^7.4.0",
     "ts-node": "^3.0.4",
-    "typescript": "^4.2.4"
+    "typescript": "^4.2.4",
+    "nodemon": "^2.0.13"
   },
   "devDependencies": {
     "@semantic-release/changelog": "^5.0.1",
@@ -68,6 +69,6 @@
     "dotenv": "^10.0.0",
     "dotenv-cli": "^4.0.0",
     "git-cz": "^4.7.6",
-    "nodemon": "^2.0.13"
+
   }
 }
