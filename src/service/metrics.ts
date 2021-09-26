@@ -4,6 +4,7 @@ const httpClientMetric = httpClient('/metrics.json');
 
 import { utcToZonedTime } from 'date-fns-tz';
 import { IMeter } from '../model/metric';
+import { sendNotification } from './notification';
 
 export const getAllMetrics = async (): Promise<IMeter[]> => {
   const result = await httpClientMetric.get<any>({ action: '' });
@@ -21,6 +22,9 @@ export const getAllMetrics = async (): Promise<IMeter[]> => {
 export const saveMetric = async (value: string) => {
   const date = new Date();
   const sendDate = utcToZonedTime(date, 'America/Sao_Paulo');
+  if (Number(value) >= 600) {
+    sendNotification();
+  }
   const result = await httpClientMetric.post({
     body: { value, sendDate },
     action: '',
