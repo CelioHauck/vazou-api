@@ -17,3 +17,6 @@ AppRoutes.forEach((route) => {
 });
 
 app.use(router.routes());
+
+app.listen(process.env.PORT || 3055);
+console.log(`listening on ${process.env.PORT} ou 3055`);
