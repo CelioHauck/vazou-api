@@ -43,7 +43,7 @@
     "dev": "nodemon",
     "build": "tsc",
     "commit": "git-cz --disable-emoji",
-    "start": "NODE_ENV=production node build/index.js"
+    "start": "node index.js"
   },
   "dependencies": {
     "@koa/cors": "^3.1.0",
