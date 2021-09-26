@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/CelioHauck/vazou-api/compare/v1.1.0...v1.2.0) (2021-09-26)
+
+
+### Features
+
+* **metrica:** Implementação do push notification ([08ac9a0](https://github.com/CelioHauck/vazou-api/commit/08ac9a0e0fdfa82a06aba62f5cc6b720a56b5dc3))
+
 # [1.1.0](https://github.com/CelioHauck/vazou-api/compare/v1.0.0...v1.1.0) (2021-09-26)
 
 
