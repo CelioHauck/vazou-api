@@ -17,6 +17,3 @@ AppRoutes.forEach((route) => {
 });
 
 app.use(router.routes());
-
-app.listen(3055);
-console.log('listening on 3055');
