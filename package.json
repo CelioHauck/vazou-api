@@ -69,6 +69,5 @@
     "@types/koa-router": "^7.0.42",
     "@types/node": "^8.10.66",
     "git-cz": "^4.7.6"
-
   }
 }
