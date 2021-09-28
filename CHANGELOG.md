@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/CelioHauck/vazou-api/compare/v1.2.0...v1.3.0) (2021-09-27)
+
+
+### Features
+
+* **metrica:** Implementação do novo endpoint ([891cbbd](https://github.com/CelioHauck/vazou-api/commit/891cbbdc94d1ab8fd2a763cd6af3e1abf1914355))
+
 # [1.2.0](https://github.com/CelioHauck/vazou-api/compare/v1.1.0...v1.2.0) (2021-09-26)
 
 
