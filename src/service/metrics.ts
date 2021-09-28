@@ -19,14 +19,16 @@ export const getAllMetrics = async (): Promise<IMeter[]> => {
   return [];
 };
 
-export const getLastMetric = async (): Promise<IMeter | undefined> => {
+export const getLastMetric = async (
+  differenceMinutes: number = 1
+): Promise<IMeter | undefined> => {
   const result = await httpClientMetric.get<any>({ action: '' });
   if (result && result.data) {
     const { data } = result;
     const parseData = Object.keys(data).map<IMeter>((key) => {
       return { id: key, ...data[key] };
     });
-    const validMeter = verifyValidMetric(parseData.pop());
+    const validMeter = verifyValidMetric(parseData.pop(), differenceMinutes);
     return validMeter;
   }
   return;
@@ -36,7 +38,10 @@ export const saveMetric = async (value: string) => {
   const date = new Date();
   const sendDate = utcToZonedTime(date, 'America/Sao_Paulo');
   if (Number(value) >= 600) {
-    sendNotification();
+    const last = await getLastMetric(10);
+    if (!last) {
+      sendNotification();
+    }
   }
   const result = await httpClientMetric.post({
     body: { value, sendDate },
@@ -46,7 +51,10 @@ export const saveMetric = async (value: string) => {
   return result.data;
 };
 
-const verifyValidMetric = (meter?: IMeter): IMeter | undefined => {
+const verifyValidMetric = (
+  meter?: IMeter,
+  minutes: number = 1
+): IMeter | undefined => {
   if (meter) {
     const difference = differenceMinutes(
       utcToZonedTime(new Date(), 'America/Sao_Paulo'),
@@ -58,7 +66,7 @@ const verifyValidMetric = (meter?: IMeter): IMeter | undefined => {
       utcToZonedTime(new Date(), 'America/Sao_Paulo'),
       new Date(meter.sendDate)
     );
-    if (difference < 181) return meter;
+    if (difference < minutes) return meter;
   }
   return;
 };
