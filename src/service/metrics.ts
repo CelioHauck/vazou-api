@@ -39,7 +39,7 @@ export const saveMetric = async (value: string) => {
   const sendDate = utcToZonedTime(date, 'America/Sao_Paulo');
   if (Number(value) >= 600) {
     const last = await getLastMetric(10);
-    if (!last) {
+    if (!last || last.value < 600) {
       sendNotification();
     }
   }
