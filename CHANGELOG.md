@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/CelioHauck/vazou-api/compare/v1.3.0...v1.3.1) (2021-09-28)
+
+
+### Bug Fixes
+
+* **metrica:** Envia notificação ([f4cfbec](https://github.com/CelioHauck/vazou-api/commit/f4cfbec29bc7675098745001c455d229afc29573))
+
 # [1.3.0](https://github.com/CelioHauck/vazou-api/compare/v1.2.0...v1.3.0) (2021-09-27)
 
 
