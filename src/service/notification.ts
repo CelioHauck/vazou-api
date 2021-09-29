@@ -15,10 +15,10 @@ const skeletonMessage = {
   },
   webpush: {
     notification: {
-      icon: 'https://vazou-aabwqe8xv-celiohauck.vercel.app/logo192.png',
+      icon: 'https://vazou.vercel.app/logo192.png',
     },
     fcmOptions: {
-      link: 'https://vazou-aabwqe8xv-celiohauck.vercel.app/medidor',
+      link: 'https://vazou.vercel.app/medidor',
     },
   },
 };
